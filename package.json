@@ -1,15 +1,18 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "obsidian-delete-empty-notes",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "An Obsidian plugin to auto delete empty and untitled notes.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
 		"version": "node version-bump.mjs && git add manifest.json versions.json"
 	},
-	"keywords": [],
-	"author": "",
+	"keywords": [
+		"obsidian",
+		"obsidian-plugin"
+	],
+	"author": "Garrett Moore",
 	"license": "MIT",
 	"devDependencies": {
 		"@types/node": "^16.11.6",
