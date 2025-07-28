@@ -46,7 +46,9 @@ export default class AutoDeleteUntitledEmptyNotesPlugin extends Plugin {
 
 		// Check for empty content
 		const content = await this.app.vault.read(file);
-		if (content.trim().length > 0) return;
+
+		// Check if content is empty (exclude file header)
+		if (content.trim().length > file.basename.length + 2) return;
 
 		const filePath = file.path;
 
